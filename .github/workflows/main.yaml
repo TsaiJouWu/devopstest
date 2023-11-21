@@ -33,7 +33,7 @@ jobs:
           path: ${{github.workspace}}/reports
   slscan:
     runs-on: ubuntu-latest
-    needs: dechecktest
+    needs: depecheck_test
     name: Perform SL Scan
     steps:
       - uses: actions/checkout@v4
