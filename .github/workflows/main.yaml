@@ -48,4 +48,4 @@ jobs:
         - uses: action/upload-artifact@master
           with:
             name: SLSCAN reports
-            path:${{github.workspace}}
+            path: ${{ github.workspace }}/reports
