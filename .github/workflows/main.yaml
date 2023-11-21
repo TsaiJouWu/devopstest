@@ -42,10 +42,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-        - uses: ShiftLeftSecurity/scan-action@master
-          with:
-            type: "credscan,java,depscan"
-        - uses: action/upload-artifact@master
-          with:
-            name: SLSCAN reports
-            path: ${{ github.workspace }}/reports
+      - uses: ShiftLeftSecurity/scan-action@master
+        with:
+          type: "credscan,java,depscan"
+      - uses: action/upload-artifact@master
+        with:
+          name: SLSCAN reports
+          path: ${{ github.workspace }}/reports
